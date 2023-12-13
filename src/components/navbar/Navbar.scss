@@ -1,0 +1,146 @@
+@import "../../index.scss";
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0.6rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: $box-shadow;
+  backdrop-filter: $backdrop-filter;
+  z-index: 99;
+  -webkit-backdrop-filter: $-webkit-backdrop-filter;
+
+  &.dark {
+    box-shadow: 1px 1px 5px $color-primary;
+  }
+
+  @media screen and (min-width: 900px) {
+    padding: 0.6rem 3rem;
+  }
+
+  .navbar-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container {
+      .logo {
+        font-size: $fs-lg;
+        color: $color-primary;
+        font-weight: $fw-bold;
+        @media screen and (min-width: 900px) {
+          font-size: $fs-2xl;
+        }
+
+        &.dark {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .menu-container {
+      position: absolute;
+      right: 10px;
+      top: 110%;
+      width: 280px;
+      background: $background-glasses;
+      box-shadow: $box-shadow;
+      backdrop-filter: $backdrop-filter;
+      -webkit-backdrop-filter: $-webkit-backdrop-filter;
+      border-radius: 8px;
+      overflow: hidden;
+      transform: scale(0);
+      transition: 300ms all ease-in-out;
+      @media screen and (min-width: 900px) {
+        position: static;
+        width: min-content;
+        height: min-content;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: inherit;
+        -webkit-backdrop-filter: inherit;
+        border-radius: 0;
+        overflow: visible;
+        transform: scale(1);
+      }
+      &.active {
+        transform: scale(1);
+        transition: 300ms all ease-in-out;
+      }
+
+      .menu-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 1rem 0;
+        @media screen and (min-width: 900px) {
+          flex-direction: row;
+          gap: 0 2rem;
+        }
+
+        li {
+          a {
+            position: relative;
+            font-size: $fs-lg;
+            font-weight: $fw-semibold;
+            color: $color-primary;
+            padding: 2px 0;
+            @media screen and (min-width: 900px) {
+              font-size: $fs-md;
+            }
+
+            &.dark {
+              color: $color-secondary;
+              &::after {
+                background-color: $color-secondary;
+              }
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              border-radius: 999px;
+              background-color: $color-primary;
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: 300ms all ease-in-out;
+              opacity: 0;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: right;
+              transition: 150ms all ease-in-out;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .mode-toggle-container {
+      cursor: pointer;
+    }
+
+    .menu-toggle-container {
+      cursor: pointer;
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
+    }
+  }
+}
