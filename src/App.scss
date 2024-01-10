@@ -1,0 +1,18 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  transition: 250ms all ease-in-out;
+}
+
+body {
+  font-family: $font-family;
+}

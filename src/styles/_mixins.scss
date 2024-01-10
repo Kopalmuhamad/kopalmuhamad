@@ -1,0 +1,71 @@
+@import "./variables";
+
+@mixin tablet {
+    @media screen and (min-width:768px) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:1024px) {
+        @content
+    }
+}
+
+@mixin largerMobile {
+    @media screen and (min-width:425px) and (max-width:768px) {
+        @content
+    }
+}
+
+@mixin container {
+    width: 97%;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@mixin section {
+    padding: 3rem 0;
+
+    @include tablet {
+        padding: 4rem 0;
+    }
+}
+
+@mixin header {
+    h1 {
+        font-size: $big-font-size;
+        font-weight: $bold-font-weight;
+
+        @include desktop {
+            font-size: $title-font-size;
+            font-weight: $bold-font-weight;
+        }
+    }
+
+    p {
+        font-size: $base-font-size;
+        font-weight: $medium-font-weight;
+        color: $shadow;
+    }
+}
+
+@mixin button {
+    padding: 1rem;
+    border-radius: 6px;
+    color: $white;
+    background-color: $black;
+
+    &:is(:hover, :active) {
+        background-color: $shadow;
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.stack-wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-self: center;
+    border: 2px solid;
+    box-shadow: 0 0 6px $black;
+    border-radius: 8px;
+    padding: 1rem;
+    row-gap: 1rem;
+    margin: 1rem 0;
+
+    .box-stack {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: .4rem;
+    }
+}

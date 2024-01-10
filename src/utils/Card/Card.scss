@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.cards {
+    overflow: hidden;
+    border-radius: 8px;
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0 6px $shadow;
+    max-width: 350px;
+    gap: .4rem 0;
+
+
+    img {
+        width: 100%;
+
+        &:is(:hover, :active) {
+            transform: scale(1.02);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.social-container {
+    display: grid;
+    justify-content: center;
+
+    .social-icons {
+        font-size: $big-font-size;
+        margin: 1rem 0;
+        color: $black;
+
+        &:is(:hover, :active) {
+            color: $shadow;
+        }
+    }
+}
