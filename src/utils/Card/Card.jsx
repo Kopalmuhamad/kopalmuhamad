@@ -6,7 +6,7 @@ const Card = ({ data }) => {
     <>
       {data.map((items, index) => {
         return (
-          <a href="#" className="cards" key={index}>
+          <a href={items.href} className="cards" key={index}>
             <i className={items.icons}></i>
             {items.img && <img src={items.img} alt="" />}
             <h3>{items.name}</h3>

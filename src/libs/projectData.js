@@ -5,9 +5,17 @@ import Furnuture from "../assets/furnuture.webp";
 import CloverPerfume from "../assets/clover-perfume.webp";
 
 export const projectData = [
-  { name: "Apartreal", img: Apartreal },
-  { name: "Movie Rated", img: MovieRated },
-  { name: "Tabungan Bersama", img: TabunganBersama },
-  { name: "Furnuture", img: Furnuture },
-  { name: "Clover Perfume", img: CloverPerfume },
+  { name: "Apartreal", img: Apartreal, href: "https://apartreal.vercel.app" },
+  { name: "Movie Rated", img: MovieRated, href: "movie-rated.vercel.app" },
+  {
+    name: "Tabungan Bersama",
+    img: TabunganBersama,
+    href: "https://tabungan-bersama.vercel.app",
+  },
+  { name: "Furnuture", img: Furnuture, href: "https://furnuture.vercel.app" },
+  {
+    name: "Clover Perfume",
+    img: CloverPerfume,
+    href: "https://clover-perfume.vercel.app",
+  },
 ];
