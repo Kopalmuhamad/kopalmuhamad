@@ -12,7 +12,7 @@ const About = () => {
     description:
       "Saya adalah frontend developer pemula dengan pengalaman lebih dari 1 tahun. Mahir dalam HTML, CSS, dan JavaScript, serta berpengalaman dengan React.",
     button: "Download CV",
-    icons: "uil uil-download",
+    icons: "uil uil-file-download",
   };
 
   return (

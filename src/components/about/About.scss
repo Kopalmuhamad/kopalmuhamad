@@ -61,6 +61,14 @@
 
                 .data-button {
                     @include button;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .6rem;
+
+                    i {
+                        font-size: $large-font-size;
+                    }
                 }
             }
 

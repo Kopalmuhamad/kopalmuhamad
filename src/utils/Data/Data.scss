@@ -1,0 +1,36 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.data-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+
+    .data-title {
+        font-size: $big-font-size;
+        font-weight: $bold-font-weight;
+
+        @include tablet {
+            font-size: $title-font-size;
+            font-weight: $bold-font-weight;
+        }
+    }
+
+    .data-subtitle {
+        font-size: $medium-font-size;
+        font-weight: $medium-font-weight;
+
+        @include tablet {
+            font-size: $large-font-size;
+        }
+    }
+
+    .data-description {
+        font-size: $base-font-size;
+
+        @include tablet {
+            font-size: $medium-font-size
+        }
+    }
+}
