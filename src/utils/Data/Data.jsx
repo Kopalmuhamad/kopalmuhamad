@@ -8,7 +8,15 @@ const Data = ({
   subtitleClassName,
   descriptionClassName,
   buttonClassName,
+  hrefButton,
 }) => {
+  const handleDownloadClick = () => {
+    // Buat elemen <a> untuk download file
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "../../assets/Muhamad Kopal.pdf"; // Tentukan URL file PDF
+    downloadLink.download = "Kopalmuhamad.pdf"; // Ganti "nama_file" sesuai keinginan Anda
+    downloadLink.click();
+  };
   const { title, subtitle, description, button, icons } = data;
 
   return (
@@ -18,7 +26,12 @@ const Data = ({
       <p className={`data-description ${descriptionClassName}`}>
         {description}
       </p>
-      <a href="#" className={`data-button ${buttonClassName}`}>
+      <a
+        download=""
+        href={hrefButton}
+        className={`data-button ${buttonClassName}`}
+        onClick={handleDownloadClick}
+      >
         {button}
         <i className={icons}></i>
       </a>

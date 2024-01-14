@@ -4,6 +4,7 @@ import HeaderSection from "../../utils/headerSection/HeaderSection";
 import Image from "../../utils/Image/Image";
 import Data from "../../utils/Data/Data";
 import Card from "../../utils/Card/Card";
+import CV from "../../assets/Muhamad Kopal.pdf";
 
 import { experienceData } from "../../libs/experience";
 
@@ -33,6 +34,7 @@ const About = () => {
             containerClassName={"about-data"}
             descriptionClassName={"data-description"}
             buttonClassName={"data-button"}
+            hrefButton={CV}
           />
         </div>
       </main>

@@ -2,11 +2,12 @@
 @import "../../styles/variables";
 
 .contact {
-    width: 100%;
     @include section;
+    width: 100%;
 
     .contact-container {
         @include container;
+        padding-bottom: 3rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, max-content);
