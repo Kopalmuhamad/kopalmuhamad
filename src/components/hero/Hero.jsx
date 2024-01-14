@@ -27,8 +27,9 @@ const Hero = () => {
           titleClassName={"data-title"}
           subtitleClassName={"data-subtitle"}
           descriptionClassName={"data-description"}
-          buttonClassName={"data-button"}
+          buttonClassName={"hero-button"}
           hrefButton={"#contact"}
+          isDownload={false}
         />
       </main>
     </section>

@@ -10,7 +10,6 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 1rem;
     box-shadow: 0 0 6px $shadow;
     max-width: 350px;
     gap: .4rem 0;
@@ -22,5 +21,8 @@
         &:is(:hover, :active) {
             transform: scale(1.02);
         }
+    }
+
+    h3 {
     }
 }

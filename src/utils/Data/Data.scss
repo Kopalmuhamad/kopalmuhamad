@@ -33,4 +33,12 @@
             font-size: $medium-font-size
         }
     }
+
+    .data-button {
+        @include button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .4rem;
+    }
 }

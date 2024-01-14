@@ -15,7 +15,7 @@ const Project = () => {
           className={"header-section"}
         />
         <div className="card-container">
-          <Card data={projectData} />
+          <Card data={projectData} padding={"1rem"} />
         </div>
       </main>
     </section>

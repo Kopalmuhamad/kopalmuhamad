@@ -28,7 +28,7 @@
         .form-container {
             display: flex;
             align-items: flex-start;
-            justify-content: center;
+            justify-content: start;
             flex-direction: column;
             row-gap: 1rem;
 
@@ -58,11 +58,7 @@
             }
 
             .form-button {
-                padding: 1rem;
-                border-radius: 6px;
-                background-color: $black;
-                color: $white;
-                border: none;
+                @include button;
             }
         }
 

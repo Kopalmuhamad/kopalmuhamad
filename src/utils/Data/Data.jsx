@@ -9,6 +9,7 @@ const Data = ({
   descriptionClassName,
   buttonClassName,
   hrefButton,
+  isDownload,
 }) => {
   const handleDownloadClick = () => {
     // Buat elemen <a> untuk download file
@@ -26,15 +27,22 @@ const Data = ({
       <p className={`data-description ${descriptionClassName}`}>
         {description}
       </p>
-      <a
-        download=""
-        href={hrefButton}
-        className={`data-button ${buttonClassName}`}
-        onClick={handleDownloadClick}
-      >
-        {button}
-        <i className={icons}></i>
-      </a>
+      {isDownload ? (
+        <a
+          download=""
+          href={hrefButton}
+          className={`data-button ${buttonClassName}`}
+          onClick={handleDownloadClick}
+        >
+          {button}
+          <i className={icons}></i>
+        </a>
+      ) : (
+        <a href={hrefButton} className={`data-button ${buttonClassName}`}>
+          {button}
+          <i className={icons}></i>
+        </a>
+      )}
     </div>
   );
 };

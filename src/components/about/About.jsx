@@ -33,8 +33,8 @@ const About = () => {
             data={propsData}
             containerClassName={"about-data"}
             descriptionClassName={"data-description"}
-            buttonClassName={"data-button"}
             hrefButton={CV}
+            isDownload={true}
           />
         </div>
       </main>
